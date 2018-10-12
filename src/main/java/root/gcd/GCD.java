@@ -13,6 +13,10 @@ package root.gcd;
  * @author Victor Kuliamin
  */
 public class GCD {
+    public static void main(String[] args) {
+        System.out.print(new GCD().gcd( 1, 4));
+    }
+
     public int gcd(int x, int y) {
         int t;
 

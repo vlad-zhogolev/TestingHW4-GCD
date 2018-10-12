@@ -22,7 +22,20 @@ dependencies {
     compile 'com.google.guava:guava:23.0'
 
     // Use JUnit test framework
-    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12', 'org.testng:testng:6.11'
+}
+
+task testNG (type:Test){
+    group 'Verification'
+    description 'Runs tests using TestNG'
+    useTestNG()
+    reports.html.destination = file("$buildDir/reports/testing")
+}
+
+test{
+    group 'Verification'
+    useJUnit()
+    reports.html.destination = file("$buildDir/reports/testing")
 }
 
 // In this section you declare where to find the dependencies of your project

@@ -7,6 +7,8 @@
  * Created on Dec 22, 2015
  */
 
+package root.gcd;
+
 /**
  * @author Victor Kuliamin
  */

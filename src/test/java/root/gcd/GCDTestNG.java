@@ -11,12 +11,12 @@ import static org.testng.Assert.*;
 public class GCDTestNG {
     @Test(dataProvider = "data")
     public void testGcdResult(int a, int b, int expected) throws Exception {
-        int result = new root.gcd.GCD().gcd(a,b);
+        int result = new GCD().gcd(a, b);
         assertEquals(result, expected);
 
         //Maybe it would be better to create separate test for checking that
         //reminder of division a and b on result is 0
-        if(result != 0) {
+        if (result != 0) {
             assertEquals(a % result, 0);
             assertEquals(b % result, 0);
         }

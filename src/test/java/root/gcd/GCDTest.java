@@ -19,8 +19,12 @@ import static org.junit.Assert.*;
 @RunWith(Parameterized.class)
 public class GCDTest {
     @Test
+    public void gcd() throws Exception {
+    }
+
+    @Test
     public void gcdTest() throws Exception {
-        int result = new root.gcd.GCD().gcd(a, b);
+        int result = new GCD().gcd(a, b);
         assertEquals(result, expected);
         if (result != 0) {
             assertEquals(a % result, 0);
